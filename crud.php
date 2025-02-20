@@ -59,7 +59,7 @@ class crud
     }
 
 
-    function ceklogin($username, $password)
+    function checkLogin($username, $password)
     {
         $conn = $this->connect();
         $sql = "SELECT id FROM users WHERE username = ? and password = ?";

@@ -6,9 +6,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = htmlspecialchars($_POST["inputUsername"]);
     $password = htmlspecialchars($_POST["inputPassword"]);
 
-    $cekLoginResult = $crud->ceklogin($username, $password);
+    $checkLoginResult = $crud->checkLogin($username, $password);
 
-    if ($cekLoginResult == true) {
+    if ($checkLoginResult == true) {
         session_unset();
         session_start();
         $_SESSION['username'] = $username;
