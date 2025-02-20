@@ -1,7 +1,12 @@
 <?php
 include "views/header.php";
-?>
 
+session_start();
+if (isset($_SESSION['username'])) {
+    header("Location: index.php");
+}
+
+?>
 <div class="row">
     <div class="col-md-8 mx-auto">
         <div class="card">

@@ -80,8 +80,7 @@ class crud
         $stmt->close();
         $conn->close();
 
-        //id, username, password
-        // $arrUser = [$id_user, $username, $password];
+        //return true/false result
         return $checkResult;
     }
 }
